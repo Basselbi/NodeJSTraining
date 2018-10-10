@@ -1,0 +1,17 @@
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('data', function(c){
+	process.stderr.write("data--->"  + c);
+});
+
+
+process.stdin.on('end',function(){
+	process.stderr.write('End!\n');
+});
+
+process.stdin.on('SIGTERM',function(){
+	process.stderr.write("Why are you trying to terminate meeeeeeeeee");
+});
+
+console.log("Node is running as process # " + process.pid);

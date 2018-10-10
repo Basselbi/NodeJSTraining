@@ -31,5 +31,19 @@ process.kill();
 Instance de eventEmitter 
 
 event `exist `
-
 event `uncaughtExeption`
+
+
+ ***Interacting with File system 
+ 
+ Wrappers around POSIX functions ( async and sync versions) 
+ 
+ ex: fs.readdir(path, callback) and fs.readdirSync(path);
+ 
+ Stream Oriented functions 
+ 
+fs.createReadStream() -- return a fs.readStream Readable Stream 
+fs.CreateWriteStream() - returns an fs.writeStream Writable stream
+
+WE can also watch a directory or file for changes ( if file changes or directory) 
+ 
